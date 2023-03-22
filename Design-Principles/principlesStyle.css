@@ -54,7 +54,7 @@ h2 {
   text-transform: uppercase;
 }
 h2::first-letter {
-  font-size: 400%;
+  font-size: 200%;
 }
 p {
   margin-bottom: 5px;
