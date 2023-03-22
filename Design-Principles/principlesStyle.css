@@ -44,6 +44,22 @@ body {
 .human-centered-principles {
   border-bottom: 2px solid rgb(159, 155, 155);
 }
+
+.interface-principles {
+  border-bottom: 2px solid rgb(159, 155, 155);
+}
+
 h2 {
   margin-left: 20px;
+  text-transform: uppercase;
+}
+h2::first-letter {
+  font-size: 200%;
+}
+p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+li {
+  line-height: 1.3;
 }
