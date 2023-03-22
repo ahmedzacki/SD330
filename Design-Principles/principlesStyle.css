@@ -1,0 +1,49 @@
+body {
+  background-color: aqua;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 70%;
+  margin: 20px auto;
+  background-color: bisque;
+}
+
+.principles-title {
+  font-size: 30px;
+  background-color: white;
+  text-align: center;
+  border-bottom: rgb(159, 155, 155);
+}
+.key-principles {
+  border-bottom: 2px solid rgb(159, 155, 155);
+}
+
+.cognitive-principles {
+  border-bottom: 2px solid rgb(159, 155, 155);
+}
+
+.emotional-principles {
+  border-bottom: 2px solid rgb(159, 155, 155);
+}
+
+.cultural-principles {
+  border-bottom: 2px solid rgb(159, 155, 155);
+}
+
+.accessibility-principles {
+  border-bottom: 2px solid rgb(159, 155, 155);
+}
+
+.complexity-principles {
+  border-bottom: 2px solid rgb(159, 155, 155);
+}
+
+.human-centered-principles {
+  border-bottom: 2px solid rgb(159, 155, 155);
+}
+h2 {
+  margin-left: 20px;
+}
