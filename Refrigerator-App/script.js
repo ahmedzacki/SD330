@@ -4,7 +4,7 @@ const watchTvBtn = document.querySelector(".watch-tv");
 const browseBtn = document.querySelector(".browse");
 const openFridgeBtn = document.querySelector(".open-fridge");
 const weatherBtn = document.querySelector(".show-weather");
-
+const timeBtn = document.querySelector(".time");
 // Adding a click event listener to the button
 watchTvBtn.addEventListener("click", function () {
   // Set the background image
@@ -29,3 +29,9 @@ weatherBtn.addEventListener("click", function () {
 
   viewPort.style.backgroundImage = 'url("weather.jpg")';
 });
+
+// time
+setInterval(() => {
+  let date = new Date();
+  timeBtn.innerHTML = date.toLocaleTimeString();
+}, 1000);
