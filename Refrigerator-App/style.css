@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,16 +9,63 @@ body {
   font-family: sans-serif;
 }
 .container {
-  background-color: white;
-  width: 50%;
+  background-color: black;
+  width: 75%;
   margin: 50px auto;
-  height: 700px;
+  height: 500px;
   border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  padding: 10px 20px;
+  column-gap: 10px;
+  row-gap: 10px;
 }
 
 .header-title {
-  color: black;
+  color: white;
   text-align: center;
-  background-color: rgb(255, 248, 240);
+
   padding: 20px 40px;
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: #74c0fc;
+  color: white;
+  font-size: 15px;
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 22px;
+  margin: 5px;
+  border: 0;
+  cursor: pointer;
+}
+.outer-display {
+  background-color: #74c0fc;
+  grid-column: 2/-1;
+  grid-row: 2/-1;
+  border-radius: 15px;
+}
+.viewPort {
+  background-color: white;
+  grid-column: 3/-2;
+  grid-row: 3/-2;
+  border-radius: 15px;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.decrese-temp {
+  grid-column: 1/2;
+}
+.show-weather {
+  grid-column: 1/2;
+}
+.minute-timer {
+  grid-column: 1/2;
+}
+.play-music {
+  grid-column: 1/2;
 }
