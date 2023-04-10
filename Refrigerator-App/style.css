@@ -7,6 +7,7 @@
 body {
   background-color: #08c2f0;
   font-family: sans-serif;
+  height: 100vh;
 }
 .container {
   background-color: black;
@@ -17,7 +18,7 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  padding: 10px 20px;
+  padding: 20px 20px;
   column-gap: 10px;
   row-gap: 10px;
 }
@@ -40,6 +41,7 @@ body {
   margin: 5px;
   border: 0;
   cursor: pointer;
+  font-weight: bold;
 }
 .outer-display {
   background-color: #74c0fc;
@@ -68,4 +70,43 @@ body {
 }
 .play-music {
   grid-column: 1/2;
+}
+.current-time {
+  color: white;
+  grid-column: 5/-1;
+  grid-row: 2/3;
+  display: flex; /* set display property to flex */
+  justify-content: center; /* center content horizontally */
+  align-items: center; /* center content vertically */
+  padding-bottom: 5px;
+  padding-left: 80px;
+}
+.current-time .time,
+.current-temp .temp {
+  /* background-color: blue; */
+  padding: 12px 24px;
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-top: 5px;
+  font-size: 28px;
+}
+
+.current-temp {
+  color: white;
+  grid-column: 2/4;
+  grid-row: 2/3;
+  display: flex; /* set display property to flex */
+  justify-content: center; /* center content horizontally */
+  align-items: center; /* center content vertically */
+  padding-bottom: 5px;
+  padding-right: 80px;
+}
+
+.to-fahrenheit {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.show-weather {
+  grid-column: 6/-1;
+  grid-row: 1/2;
 }
