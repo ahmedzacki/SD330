@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: aqua;
+      }
+      #files {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body onload="fileList()">
+    <h1>Hello, My name is Ahmed</h1>
+    <h3>
+      This page is used to display information about my github file system
+    </h3>
+    <
+    <div id="files"></div>
+  </body>
+  <script>
+    function fileList() {
+      (async () => {
+        const response = await fetch(
+          "https://api.github.com/repos/ahmedzacki/SD330/contents/"
+        );
+        const data = await response.json();
+
+        let htmlString = "";
+        for (let file of data) {
+          fname = file.name;
+          fpath = "https://ahmedzacki.github.io/SD330/" + fname;
+
+          htmlString += "<p>" + fname;
+          htmlString += "<p>" + fpath;
+        }
+
+        htmlString += "</ul></div>";
+        document.getElementById("files").innerHTML = htmlString;
+      })();
+    }
+  </script>
+</html>
