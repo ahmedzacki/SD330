@@ -17,16 +17,22 @@
       <button class="btn to-celcius">CONVER TO CELCIUS</button>
       <button class="btn increse-temp">RESERVED BTN</button>
       <button class="btn to-fehrenheit">CONVER TO FEHRENHEIT</button>
-      <button class="btn show-weather">SHOW WEATHER</button>
-      <button class="btn minute-timer">MINUTE TIMER</button>
-      <button class="btn play-music">PLAY MUSIC</button>
+      <button class="btn show-weather">SHOW WEATHEsR</button>
+      <button class="btn minute-timer">STAR 1 MINUTE TIMER</button>
+
+      <button class="btn play-music" id="audioButton">PLAY MUSIC</button>
+      <audio id="audio" src="music.mp3"></audio>
+
       <div class="outer-display"></div>
       <div class="viewPort"></div>
       <div class="current-time">
         <h1 class="time"></h1>
       </div>
+      <div class="timer-container"><h1 id="timer"></h1></div>
       <div class="current-temp">
-        <h1 class="temperature-display">TEMP: 0°C</h1>
+        <h1 class="temperature-display">
+          TEMP: <span id="tempValue">0</span>°C
+        </h1>
         <div class="icon-container">
           <svg
             xmlns="http://www.w3.org/2000/svg"

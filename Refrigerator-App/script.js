@@ -30,7 +30,6 @@ openFridgeBtn.addEventListener("click", function () {
 // weather button functionalities
 weatherBtn.addEventListener("click", function () {
   // Set the background image
-
   viewPort.style.backgroundImage = 'url("weather.jpg")';
 });
 
@@ -92,4 +91,51 @@ toCelcius.addEventListener("click", function () {
     const celsius = convertToCelsius(temperature);
     temperatureDisplay.textContent = `TEMP: ${celsius}°C`;
   }
+});
+
+// Audio file
+function toggleAudio() {
+  var audio = document.getElementById("audio");
+  var button = document.getElementById("audioButton");
+  if (audio.paused) {
+    audio.play();
+    button.textContent = "PAUSE MUSIC";
+  } else {
+    audio.pause();
+    button.textContent = "PLAY MUSIC";
+  }
+}
+
+document.getElementById("audioButton").addEventListener("click", toggleAudio);
+// One minute timer
+
+const startButton = document.querySelector(".minute-timer");
+const timerContainer = document.getElementById("timer");
+
+startButton.addEventListener("click", function () {
+  let timeLeft = 60; // Set the initial time left in seconds
+
+  // Update the timer every second
+  const timerInterval = setInterval(function () {
+    timeLeft--;
+    timerContainer.textContent = `${timeLeft} secs left`; // Update the timer container
+
+    // Stop the timer when it reaches 0
+    if (timeLeft === 0) {
+      clearInterval(timerInterval);
+      timerContainer.textContent = "Timer ended"; // Update the timer container to indicate that the timer has ended
+    }
+  }, 1000);
+
+  const timerIntervalSecond = setInterval(function () {
+    // Stop the timer when it reaches 0
+    if (timeLeft === 0) {
+      timerContainer.textContent = ""; // Update the timer container to indicate that the timer has ended
+    }
+  }, 10000);
+});
+// Turn off button to clear the fridge display
+const turnOffFridge = document.querySelector(".turn-off-fridge");
+turnOffFridge.addEventListener("click", function () {
+  viewPort.style.backgroundImage = "";
 });

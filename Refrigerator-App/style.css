@@ -95,6 +95,22 @@ body {
   font-size: 28px;
 }
 
+#timer {
+  font-size: 24px;
+}
+.timer-container {
+  grid-column: 2/3;
+  grid-row: 5/6;
+
+  display: flex; /* set display property to flex */
+  justify-content: center; /* center content horizontally */
+  align-items: center; /* center content vertically */
+  color: white;
+  margin: 4px 8px;
+
+  border: 2px solid white;
+  border-radius: 20px;
+}
 .current-temp {
   color: white;
   grid-column: 2/4;
