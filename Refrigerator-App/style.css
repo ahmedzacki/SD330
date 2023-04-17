@@ -98,6 +98,10 @@ body {
 #timer {
   font-size: 24px;
 }
+.timer-container-border {
+  border: 2px solid white;
+}
+
 .timer-container {
   grid-column: 2/3;
   grid-row: 5/6;
@@ -108,7 +112,6 @@ body {
   color: white;
   margin: 4px 8px;
 
-  border: 2px solid white;
   border-radius: 20px;
 }
 .current-temp {
