@@ -1,1 +1,36 @@
 
+.home,
+.userAccount,
+.settings,
+.pwreset {
+  text-decoration: none;
+  font-size: 24px;
+  display: inline-block;
+  padding-right: 15px;
+}
+a:hover {
+  color: red;
+}
+
+.label1,
+.label2 {
+  display: block;
+}
+
+.label1,
+.label2 {
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 20px;
+}
+.changeName,
+.changeAddress,
+.changePW {
+  display: block;
+}
+.settings-links a {
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
