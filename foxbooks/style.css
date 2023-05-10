@@ -255,10 +255,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 20px;
-  background-color: #c09774;
+  background-color: #555;
+  text-align: center;
 }
 .view-courses:hover {
-  background-color: #555;
+  background-color: #c09774;
   color: #ddd;
 }
 .courses-btn {
@@ -339,4 +340,7 @@ body {
 .footer-link:hover,
 .footer-link:active {
   color: #555;
+}
+.courses-container {
+  height: 100%vh;
 }
