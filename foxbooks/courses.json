@@ -8,7 +8,7 @@
       "books": [
         {
           "isbn": "0134674387",
-          "title": "Data Structures and Algorithms in Python",
+          "title": "Data Structures in Python",
           "author": "Michael T. Goodrich"
         }
       ]
@@ -21,7 +21,7 @@
       "books": [
         {
           "isbn": "9780134594753",
-          "title": "Database Systems: Design, Implementation, & Management",
+          "title": "Design, Implementation, & Management",
           "author": "Carlos Coronel"
         }
       ]
@@ -47,7 +47,7 @@
       "books": [
         {
           "isbn": "013438038X",
-          "title": "Designing Interfaces: Patterns for Effective Interaction Design",
+          "title": "Patterns for Effective Interaction Design",
           "author": "Jenifer Tidwell"
         }
       ]
@@ -73,7 +73,7 @@
       "books": [
         {
           "isbn": "013438038X",
-          "title": "Designing Interfaces: Patterns for Effective Interaction Design",
+          "title": "Patterns for Effective Interaction Design",
           "author": "Jenifer Tidwell"
         }
       ]
