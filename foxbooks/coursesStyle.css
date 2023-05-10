@@ -1,0 +1,58 @@
+.breadcrumb-courses-list {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  margin-bottom: 30px;
+  list-style: none;
+}
+.subheading-courses {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.courses-view-port {
+  background-color: #f5dfcc;
+  padding: 8rem;
+}
+.courses-view-port {
+  margin-bottom: 10rem;
+}
+.courses {
+  font-size: 24px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 4rem;
+  align-items: center;
+}
+.courses a {
+  text-decoration: none;
+  border-bottom: 2px solid #333;
+}
+.books {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 4rem;
+  align-items: center;
+}
+.book-list {
+  list-style-type: none;
+}
+
+.book-list li {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  font-style: italic;
+  font-size: 27px;
+  font-weight: bold;
+}
+.book-list li strong {
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 100;
+}
