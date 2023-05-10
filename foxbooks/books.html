@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="coursesStyle.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Books</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img class="logo" alt="Foxbook logo" src="foxbook-logo.png" />
+      </a>
+      <h1 class="heading-secondary one courseId"></h1>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="index.html">Home</a></li>
+          <li><a class="main-nav-link" href="courses.html">Courses</a></li>
+          <li><a class="main-nav-link" href="#">Account</a></li>
+          <li><a class="main-nav-link" href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container courses-view-port">
+      <div class="breadcrum">
+        <ul class="breadcrumb-courses-list">
+          <li><a href="index.html">Home &rightarrow;</a></li>
+          <li><a href="courses.html">Courses &rightarrow;</a></li>
+          <li>Books</li>
+        </ul>
+      </div>
+
+      <h2 class="subheading-courses">Book info:</h2>
+      <span class="books"></span>
+
+      <script type="module">
+        async function displayBook() {
+          const url = new URL(window.location.href);
+          const courseId = url.searchParams.get("course");
+
+          const coursesResponse = await fetch(
+            "https://raw.githubusercontent.com/ahmedzacki/SD330/main/foxbooks/courses.json"
+          );
+          const coursesData = await coursesResponse.json();
+          const selectedCourse = coursesData["courses"][courseId];
+
+          const books = selectedCourse["books"];
+          const bookList = document.createElement("ul");
+          bookList.classList.add("book-list");
+
+          books.forEach((book) => {
+            const listItem = document.createElement("li");
+            listItem.innerHTML += `<br><br><strong>ISBN:</strong> ${book["isbn"]}<br><br><strong>Title:</strong> ${book["title"]}<br><br><strong>Author:</strong> ${book["author"]}<br>`;
+            bookList.appendChild(listItem);
+          });
+
+          document.querySelector(".courseId").innerHTML = courseId;
+          document.querySelector(".books").appendChild(bookList);
+        }
+
+        displayBook();
+      </script>
+    </div>
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img class="logo" alt="foxbook logo" src="foxbook-logo.png" />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">&copy; Ahmed Handulle. All rights reserved.</p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">3399 North Road, Poughkeepsie, NY, 12601</p>
+            <p>
+              <a class="footer-link" href="tel:415-201-6370">123-409-5678</a
+              ><br />
+              <a class="footer-link" href="mailto:hello@foxbooks.com"
+                >hello@foxbooks.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About FoxBooks</a></li>
+            <li><a class="footer-link" href="#">For Business</a></li>
+            <li><a class="footer-link" href="#">Newsletter</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Help center</a></li>
+            <li><a class="footer-link" href="#">Privacy & terms</a></li>
+            <li><a class="footer-link" href="#">Policy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
